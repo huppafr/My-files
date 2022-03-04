@@ -1,2 +1,2 @@
-# My-files
+# my files
 Repository for my files
