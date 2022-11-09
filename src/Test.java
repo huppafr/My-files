@@ -14,25 +14,35 @@ import java.util.Scanner;
 // sout - System.out.Println
 // fori - Вызывает цикл for
 
-
+// двузначные, четные и положительные
 
 public class Test {
     public static void main(String[] args) throws IOException {
+        int nums_count = new Scanner(System.in).nextInt();
         Scanner scan = new Scanner(System.in);
-        int repetition = scan.nextInt();
-        String open = "[", close = "]";
-        for (int i = 0; i < repetition; i++) {
-            System.out.print(open);
+        int [] array = new int[nums_count];
+        
+        System.out.println(array.toString(array));
+        while (scan.hasNext()){
+            {
         }
-        for (int i = 0; i < repetition; i++) {
-            System.out.print(close);
-        }
+
     }
 }
 
 
 
+
 /*
+// МАССИВЫ !
+// int [] array = new int[100]; // массив на сто целых чисел, по умолчанию все элементы массива заполняются базовыми значениями 0
+
+// Двумерные массивы в Java - это массивы массивов:
+//int [][] Array2D = new int[50][100]; // таблица на 50 строк и 100 столбцов
+
+// Сортировка массива
+// int [] array = {1, 2, 7, 2, 1, 2, 6, 9};
+// Arrays.sort(array);
 
 // ЦИКЛЫ !
 // if(a != 4) // а не равно 4
@@ -89,6 +99,12 @@ public class Test {
         System.out.printf("%d", a);// а = 10, поскольку условие не выполнено, но инструкция а = а + 7 выполнена независимио
 
 
+        // Бесконечный ввод данных на потоке
+        Scanner scan = new Scanner(System.in);
+        int num
+        while (scan.hasNext()){
+
+        }
 
     }
 }
