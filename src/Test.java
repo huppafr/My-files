@@ -14,26 +14,101 @@ import java.util.Scanner;
 // sout - System.out.Println
 // fori - Вызывает цикл for
 
-// двузначные, четные и положительные
+
+/*
+
+*/
 
 public class Test {
     public static void main(String[] args) throws IOException {
-        int nums_count = new Scanner(System.in).nextInt();
         Scanner scan = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
+        int nums_count = scan.nextInt();
         int [] array = new int[nums_count];
-        
-        System.out.println(array.toString(array));
-        while (scan.hasNext()){
-            {
+        int length = array.length;
+        int counter = 0;
+        String slices = "";
+
+        // Заполняем массив значениями
+        for (int i = 0; i < nums_count; i++) {
+            array[i] = scan.nextInt();
         }
 
+        int last_element = array[array.length-1];
+        int penultimate = array[array.length-2];
+
+        for (int i = 0; i < nums_count-1; i++) {
+            if (array[i] < array[i+1]){
+                slices += (Integer.toString(array[i])); slices += " ";
+            }
+            if (array[i] > array[i+1]){
+                slices += (Integer.toString(array[i]));
+                counter++;
+                //System.out.println(slices);
+                slices="";
+            }
+        }
+        slices="";
+        System.out.println(counter);
+
+        for (int i = 0; i < nums_count-1; i++) {
+            if (array[i] < array[i+1]){
+                slices += (Integer.toString(array[i])); slices += " ";
+            }
+            if (array[i] > array[i+1]){
+                slices += (Integer.toString(array[i]));
+                // counter++;
+                System.out.println(slices);
+                slices="";
+            }
+        }
+
+        if (penultimate < last_element)
+            slices += last_element;
+
+
+
+        System.out.println(slices);
+
+        System.out.println("--------------------------------------------------------------");
+        System.out.println(penultimate);
+        System.out.println(last_element);
+        System.out.print(Arrays.toString(array));
+
+        // System.out.print(Arrays.toString(array));
+        //System.out.println(Arrays.toString(array));
     }
 }
 
 
 
-
 /*
+
+// СТРОКИ !
+
+Методы класса String:
+
+charAt(int index);               // возвращает букву строки по индексу, [] - так нельзя!
+length();                        // возвращает длину строки
+toUpperCase();                   // приводит строку к верхнему регистру
+toLowerCase();                   // приводит строку к нижнему регистру
+compareTo(String anotherStr);    // лексикографическое сравнение строк
+contains(String str);            // проверяет содержится ли строка внутри строки
+startsWith(String str);          // проверяет начинает ли строка на строку
+endsWith(String str);            // проверяет заканчивается ли строка на строку
+indexOf(String str);             // возвращает позицию первого вхождения подстроки в строку
+lastIndexOf(String str);         // возвращает позицию последнего вхождения подстроки в строку
+split(regex reg);                // разбивает строку на массив строк по регулярному выражению
+toCharArray();                   // возвращает массив с символами
+Методы класса StringBuilder, которых нет в классе String:
+
+append(String str);              // вставка в конец за константное время
+set(int index, char ch);         // изменение буквы внутри строки
+delete(int from, int to);        // удаление куска строки
+deleteCharAt(int index);         // удаление символа по индексу
+insert(int index, String str);   // вставка строки по индексу
+reverse()                        // обратный порядок симовлов
+
 // МАССИВЫ !
 // int [] array = new int[100]; // массив на сто целых чисел, по умолчанию все элементы массива заполняются базовыми значениями 0
 
@@ -101,9 +176,9 @@ public class Test {
 
         // Бесконечный ввод данных на потоке
         Scanner scan = new Scanner(System.in);
-        int num
+        int num;
         while (scan.hasNext()){
-
+            int = in.nextInt();
         }
 
     }
