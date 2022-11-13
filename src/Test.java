@@ -16,67 +16,17 @@ import java.util.Scanner;
 
 
 /*
-
+The bartender's working on a Late night shift She's bonka blonds and Bon Aims on a midnight drift
 */
 
 public class Test {
     public static void main(String[] args) throws IOException {
         Scanner scan = new Scanner(System.in);
-        Scanner in = new Scanner(System.in);
-        int nums_count = scan.nextInt();
-        int [] array = new int[nums_count];
-        int length = array.length;
-        int counter = 0;
-        String slices = "";
-
-        // Заполняем массив значениями
-        for (int i = 0; i < nums_count; i++) {
-            array[i] = scan.nextInt();
+        String[] str = scan.nextLine().split(", | - ");
+        System.out.println(str[0] + ":");
+        for (int i = 1; i < str.length; i++) {
+            System.out.println("-" + str[i]);
         }
-
-        int last_element = array[array.length-1];
-        int penultimate = array[array.length-2];
-
-        for (int i = 0; i < nums_count-1; i++) {
-            if (array[i] < array[i+1]){
-                slices += (Integer.toString(array[i])); slices += " ";
-            }
-            if (array[i] > array[i+1]){
-                slices += (Integer.toString(array[i]));
-                counter++;
-                //System.out.println(slices);
-                slices="";
-            }
-        }
-        slices="";
-        System.out.println(counter);
-
-        for (int i = 0; i < nums_count-1; i++) {
-            if (array[i] < array[i+1]){
-                slices += (Integer.toString(array[i])); slices += " ";
-            }
-            if (array[i] > array[i+1]){
-                slices += (Integer.toString(array[i]));
-                // counter++;
-                System.out.println(slices);
-                slices="";
-            }
-        }
-
-        if (penultimate < last_element)
-            slices += last_element;
-
-
-
-        System.out.println(slices);
-
-        System.out.println("--------------------------------------------------------------");
-        System.out.println(penultimate);
-        System.out.println(last_element);
-        System.out.print(Arrays.toString(array));
-
-        // System.out.print(Arrays.toString(array));
-        //System.out.println(Arrays.toString(array));
     }
 }
 
@@ -108,6 +58,18 @@ delete(int from, int to);        // удаление куска строки
 deleteCharAt(int index);         // удаление символа по индексу
 insert(int index, String str);   // вставка строки по индексу
 reverse()                        // обратный порядок симовлов
+
+public class Test {
+    public static void main(String[] args) throws IOException {
+        Scanner in = new Scanner(System.in);
+        String s = in.nextLine();
+        String[] strings = s.split(" ");
+        // Вывод все строки начинающиеся с а до h
+        for(String str : strings)
+            if(str.matches("^(?i)[a-h]\\w*"))
+                System.out.println(str);
+    }
+}
 
 // МАССИВЫ !
 // int [] array = new int[100]; // массив на сто целых чисел, по умолчанию все элементы массива заполняются базовыми значениями 0
