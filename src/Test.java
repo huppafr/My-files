@@ -19,14 +19,32 @@ import java.util.Scanner;
 The bartender's working on a Late night shift She's bonka blonds and Bon Aims on a midnight drift
 */
 
+// abcdef abcfonpq
 public class Test {
     public static void main(String[] args) throws IOException {
-        Scanner scan = new Scanner(System.in);
-        String[] str = scan.nextLine().split(", | - ");
-        System.out.println(str[0] + ":");
-        for (int i = 1; i < str.length; i++) {
-            System.out.println("-" + str[i]);
+        Scanner in = new Scanner(System.in);
+        char [] s2 = in.next().toCharArray();
+        char [] s3 = in.next().toCharArray();
+        //System.out.println(s3);
+
+        for(int i = 0;i<s2.length;i++){
+            for(int j = 0;j<s3.length;j++){
+                if(s2[i]==s3[j]){s2[i]=0;s3[j]=0;}
+            }
         }
+        String a = "";
+        for (int i = 0; i < s2.length; i++) {
+            if (s2[i] != 0)
+                a += s2[i];
+        }
+        for (int i = 0; i < s3.length; i++) {
+            if (s3[i] != 0)
+                a += s3[i];
+        }
+        System.out.println(a);
+        System.out.println(s2);
+        System.out.println(s3);
+
     }
 }
 
