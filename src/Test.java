@@ -2,10 +2,7 @@ import javax.sound.midi.SysexMessage;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Scanner;
-
-
+import java.util.*;
 
 
 // c++  это  c=c+1
@@ -19,35 +16,50 @@ import java.util.Scanner;
 The bartender's working on a Late night shift She's bonka blonds and Bon Aims on a midnight drift
 */
 
-// abcdef abcfonpq
-public class Test {
-    public static void main(String[] args) throws IOException {
-        Scanner in = new Scanner(System.in);
-        char [] s2 = in.next().toCharArray();
-        char [] s3 = in.next().toCharArray();
-        //System.out.println(s3);
 
-        for(int i = 0;i<s2.length;i++){
-            for(int j = 0;j<s3.length;j++){
-                if(s2[i]==s3[j]){s2[i]=0;s3[j]=0;}
-            }
-        }
-        String a = "";
-        for (int i = 0; i < s2.length; i++) {
-            if (s2[i] != 0)
-                a += s2[i];
-        }
-        for (int i = 0; i < s3.length; i++) {
-            if (s3[i] != 0)
-                a += s3[i];
-        }
-        System.out.println(a);
-        System.out.println(s2);
-        System.out.println(s3);
+public class Test {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        StringBuilder a = new StringBuilder(scan.nextLine());
+        System.out.print(a);
+        StringBuilder b = a.reverse();
+
+        System.out.print(b);
+
+
+
 
     }
 }
 
+
+
+// ДИНАМИЧЕСКИЕ МАССИВЫ !
+/*
+// abcdef abcfonpq
+list.add(12); // вставка элемента 12 в конец списка
+list.add(1, 18); // вставка по индексу 1 элемента 18
+int a = list.get(2); // получение элемента списка по индексу
+list.set(2, 8); // заменить значение списка по индексу
+list.remove(1); // удалить элемент по индексу
+public class Test {
+    public static void main(String[] args) throws IOException {
+        ArrayList<Integer> arlist = new ArrayList<>(); //в треугольных скобках передаем ссылочный тип!
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        for (int i = 0; i < 10; i++) {
+            arlist.add(i+1); // заполняем массив
+        }
+        arlist.add(3, 87);
+        arlist.remove(2);
+        for (int i = 0; i < arlist.size(); i++) {
+            arlist.set(i, arlist.get(i) * 7);
+
+        }
+        Collections.sort(arlist);
+
+    }
+}
+*/
 
 
 /*
