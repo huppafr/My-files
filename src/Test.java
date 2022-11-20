@@ -21,15 +21,42 @@ The bartender's working on a Late night shift She's bonka blonds and Bon Aims on
 public class Test {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String array = scan.nextLine();
-        String [] first_buf = array.split(" ");
-        int arraylength = Integer.valueOf(first_buf[1]);
-        ArrayList<Integer> arrayList = new ArrayList<>(); //в треугольных скобках передаем ссылочный тип!
-        for (int i = 0; i < arraylength; i++) {
-            arrayList.add(i+1);
+        ArrayList<Integer> finalArray = new ArrayList<>();
+        ArrayList<Integer> finalArray1 = new ArrayList<>();
+        //String str = scan.nextLine().split(" ");
+        String[] str_buf = scan.nextLine().split(" ");
+       // String[] listFirst = scanner.nextLine().split(" ");
+        for (int i = 0; i < str_buf.length; i++) {
+            finalArray.add(Integer.valueOf(str_buf[i]));
         }
 
+        //String str2 = scan.nextLine();
+        String[] str_buf2 = scan.nextLine().split(" ");
+        for (int i = 0; i < str_buf2.length; i++) {
+            finalArray1.add(Integer.valueOf(str_buf2[i]));
+
+        }
+
+
+
+
+        finalArray.retainAll(finalArray1);
+        Collections.sort(finalArray);
+
+
+
+        System.out.println(finalArray);
+        ArrayList<Integer> finalArray2 = new ArrayList<>();
+
+
+        //System.out.println(finalArray);
+
+
+        //Collections.reverse();
+        //System.out.println(finalArray);
+        //int arraylength = Integer.valueOf(first_buf[1]);
     }
+
 }
 
 
@@ -38,6 +65,9 @@ public class Test {
 
 // ДИНАМИЧЕСКИЕ МАССИВЫ !
 /*
+if (Integer.valueOf(finalArray.get(i))!=Integer.valueOf(finalArray.get(i+1)))
+                finalArray2.add(Integer.valueOf(finalArray.get(i)));
+            System.out.println(finalArray2);
 // abcdef abcfonpq
 list.add(12); // вставка элемента 12 в конец списка
 list.add(1, 18); // вставка по индексу 1 элемента 18
@@ -96,9 +126,6 @@ public class Test {
                         System.out.printf(arrayList.get(i) + " ");
                     else
                         System.out.print(arrayList.get(i));
-
-
-
                 }
 
         }
