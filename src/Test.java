@@ -17,20 +17,22 @@ The bartender's working on a Late night shift She's bonka blonds and Bon Aims on
 */
 
 
+
 public class Test {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        StringBuilder a = new StringBuilder(scan.nextLine());
-        System.out.print(a);
-        StringBuilder b = a.reverse();
-
-        System.out.print(b);
-
-
-
+        String array = scan.nextLine();
+        String [] first_buf = array.split(" ");
+        int arraylength = Integer.valueOf(first_buf[1]);
+        ArrayList<Integer> arrayList = new ArrayList<>(); //в треугольных скобках передаем ссылочный тип!
+        for (int i = 0; i < arraylength; i++) {
+            arrayList.add(i+1);
+        }
 
     }
 }
+
+
 
 
 
@@ -60,6 +62,52 @@ public class Test {
     }
 }
 */
+
+/*
+public class Test {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String array = scan.nextLine();
+        String [] first_buf = array.split(" ");
+        int arraylength = Integer.valueOf(first_buf[1]);
+        ArrayList<Integer> arrayList = new ArrayList<>(); //в треугольных скобках передаем ссылочный тип!
+        for (int i = 0; i < arraylength; i++) {
+            arrayList.add(i+1);
+        }
+        while (scan.hasNext()){
+            String str = scan.nextLine();
+            String[] str_buf = str.split(" ");
+
+            if (str_buf[0].equals("add") && (str_buf.length == 2)) {
+                arrayList.add(Integer.valueOf(str_buf[1]));
+            }
+            if (str_buf[0].equals("add") && (str_buf.length == 3)){
+                arrayList.add(Integer.valueOf(str_buf[1]), Integer.valueOf(str_buf[2]));
+            }
+            if (str_buf[0].equals("remove")){
+                arrayList.remove(Integer.parseInt(str_buf[1]));
+            }
+            if (str_buf[0].equals("set") && (str_buf.length == 3)) {
+                arrayList.set(Integer.valueOf(str_buf[1]), Integer.valueOf(str_buf[2]));
+            }
+            if (str_buf[0].equals("printList"))
+                for (int i = 0; i < arrayList.size(); i++) {
+                    if (i < arrayList.size()-1)
+                        System.out.printf(arrayList.get(i) + " ");
+                    else
+                        System.out.print(arrayList.get(i));
+
+
+
+                }
+
+        }
+    }
+}
+
+*/
+
+
 
 
 /*
