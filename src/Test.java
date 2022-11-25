@@ -20,41 +20,31 @@ The bartender's working on a Late night shift She's bonka blonds and Bon Aims on
 
 public class Test {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        ArrayList<Integer> finalArray = new ArrayList<>();
-        ArrayList<Integer> finalArray1 = new ArrayList<>();
-        //String str = scan.nextLine().split(" ");
-        String[] str_buf = scan.nextLine().split(" ");
-       // String[] listFirst = scanner.nextLine().split(" ");
-        for (int i = 0; i < str_buf.length; i++) {
-            finalArray.add(Integer.valueOf(str_buf[i]));
+        int[] arr = new int[5];
+        arr = new int[]{5, 1, 2, 4, 3};
+        Arrays.sort(arr);
+        for (int i = 0; i < arr.length; i++)
+        {
+            for (int j = i + 1; j < arr.length; j++)
+            {
+                int tmp = 0;
+                if (arr[i] > arr[j])
+                {
+                    tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+//prints the sorted element of the array
+            //System.out.print(arr[i] + " ");
         }
-
-        //String str2 = scan.nextLine();
-        String[] str_buf2 = scan.nextLine().split(" ");
-        for (int i = 0; i < str_buf2.length; i++) {
-            finalArray1.add(Integer.valueOf(str_buf2[i]));
-
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
-
-
-
-
-        finalArray.retainAll(finalArray1);
-        Collections.sort(finalArray);
-
-
-
-        System.out.println(finalArray);
-        ArrayList<Integer> finalArray2 = new ArrayList<>();
-
-
-        //System.out.println(finalArray);
-
-
-        //Collections.reverse();
-        //System.out.println(finalArray);
-        //int arraylength = Integer.valueOf(first_buf[1]);
+        //Arrays.sort(a);
+        //for (int i = 0; i < a.length; i++) {
+          //  System.out.print(a[i] + " ");
+        //}
     }
 
 }
