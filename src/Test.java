@@ -19,34 +19,21 @@ The bartender's working on a Late night shift She's bonka blonds and Bon Aims on
 
 
 public class Test {
-    public static void main(String[] args) {
+    static boolean isPrime(long n){
+        long temp;
+        boolean isPrime=true;
 
-
-        int[] arr = new int[5];
-        arr = new int[]{5, 1, 2, 4, 3};
-        Arrays.sort(arr);
-        for (int i = 0; i < arr.length; i++)
-        {
-            for (int j = i + 1; j < arr.length; j++)
-            {
-                int tmp = 0;
-                if (arr[i] > arr[j])
-                {
-                    tmp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = tmp;
-                }
+        for (int i=2; i<=n/2; i++) {
+            temp = n % i;
+            if (temp == 0) {
+                isPrime = false;
+                break;
             }
-//prints the sorted element of the array
-            //System.out.print(arr[i] + " ");
+            if (isPrime) {return true;}
+            else {return false;}
         }
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        //Arrays.sort(a);
-        //for (int i = 0; i < a.length; i++) {
-          //  System.out.print(a[i] + " ");
-        //}
+
+        return isPrime;
     }
 
 }
@@ -57,6 +44,14 @@ public class Test {
 
 // ДИНАМИЧЕСКИЕ МАССИВЫ !
 /*
+
+for(String d : substrings) { // Цикл по массиву
+    if (d.length() > len) {
+        len = d.length();
+        maxLength = d;
+    }
+
+
 if (Integer.valueOf(finalArray.get(i))!=Integer.valueOf(finalArray.get(i+1)))
                 finalArray2.add(Integer.valueOf(finalArray.get(i)));
             System.out.println(finalArray2);
